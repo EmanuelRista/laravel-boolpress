@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Boolpress</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -26,13 +26,10 @@
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
-                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
+                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Admin</a>
                     @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
-                        @endif
+                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Admin</a>
+                        
                     @endauth
                 </div>
             @endif
@@ -51,7 +48,7 @@
                         <div class="p-6 border-t border-gray-200 dark:border-gray-700">
                             <div class="flex items-center">
                                 <i class="fas fa-newspaper"></i>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="/free-zone/test" class="underline text-gray-900 dark:text-white">View posts</a></div>
+                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="/blogs" class="underline text-gray-900 dark:text-white">Vai agli articoli</a></div>
                             </div>
 
                             <div class="ml-12">
@@ -64,7 +61,7 @@
                         <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
                             <div class="flex items-center">
                                 <i class="fas fa-tools"></i>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="/restricted-zone/test" class="underline text-gray-900 dark:text-white">Manage posts</a></div>
+                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="" class="underline text-gray-900 dark:text-white">Torna alla Home</a></div>
                             </div>
 
                             <div class="ml-12">

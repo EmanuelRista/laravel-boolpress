@@ -14,13 +14,13 @@ class TestController extends Controller
         }
 
         $user = Auth::user();
-        return view('test', compact('user'));
+        return view('manage', compact('user'));
     }
 
     public function guest()
     {
 
-        return view('test');
+        return 'Here the posts';
     }
 
 }
